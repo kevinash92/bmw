@@ -1,0 +1,17 @@
+-- SONARQUBE USERS AND DB
+
+--CREATE USER sonarqube WITH ENCRYPTED PASSWORD 'sonarqube';
+--CREATE DATABASE sonarqube  WITH OWNER = sonarqube ENCODING = 'UTF8';
+--GRANT ALL PRIVILEGES ON DATABASE sonarqube TO sonarqube;
+
+-- Keycloak USERS AND DB
+CREATE USER keycloak WITH ENCRYPTED PASSWORD 'keycloak';
+CREATE DATABASE keycloak  WITH OWNER = keycloak ENCODING = 'UTF8';
+GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak;
+
+-- bizmoilewe USERS AND DB
+CREATE USER bizmoilewe WITH ENCRYPTED PASSWORD 'bizmoilewe';
+CREATE DATABASE bmw_dev_db WITH OWNER = bizmoilewe ENCODING = 'UTF8';
+GRANT ALL PRIVILEGES ON DATABASE bmw_dev_db TO bizmoilewe;
+
+

@@ -1,0 +1,24 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  postgres:
+    image: postgres:alpine3.18
+    container_name: bmw_postgres_instance
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./infra/postgres/startup:/docker-entrypoint-initdb.d
+      - ./infra/postgres/data:/tmp
+    mem_limit: 1024m
+    cpu_shares: 10
+    deploy:
+      replicas: 1
+
+networks:
+  default:
+    name: bmw-network
